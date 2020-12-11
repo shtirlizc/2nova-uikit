@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook -p 9000 -c .storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -43,9 +43,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@storybook/addon-docs": "6.0.0-beta.25",
+    "@storybook/addon-docs": "6.1.10",
     "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "6.0.0-beta.25",
+    "@storybook/react": "6.1.10",
     "babel-loader": "8.1.0"
   }
 }
