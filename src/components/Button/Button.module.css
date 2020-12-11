@@ -21,6 +21,10 @@
   padding: 5px 30px 0;
 }
 
+.root:focus {
+  outline: none;
+}
+
 /* types */
 
 .primary {
@@ -28,15 +32,27 @@
   color: #2c343c;
 }
 
+.primary:focus {
+  box-shadow: 0 0 2px 1px var(--primary);
+}
+
 .secondary {
   background-color: var(--secondary);
   color: #ffffff;
+}
+
+.secondary:focus {
+  box-shadow: 0 0 2px 1px var(--secondary);
 }
 
 .outlined {
   color: #4e5c69;
   background-color: #ffffff;
   border: 1px solid #4e5c69;
+}
+
+.outlined:focus {
+  box-shadow: 0 0 2px 1px #4e5c69;
 }
 
 /* sizes */
