@@ -5,7 +5,7 @@ import s from "./Button.module.css";
 
 export type ButtonProps = {
   type?: "primary" | "secondary" | "outlined";
-  size?: "s" | "m" | "l" | "xl",
+  size?: "sm" | "md" | "lg" | "xl",
 };
 
 const Button: React.FC<ButtonProps> = ({
