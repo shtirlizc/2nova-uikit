@@ -12,9 +12,9 @@ jobs:
           persist-credentials: false
       - name: Install and Build 🔧
         run: |
-          npm install
-          npm run build-storybook
-          npm run copy-fonts
+          yarn
+          yarn build-storybook
+          yarn copy-fonts
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
