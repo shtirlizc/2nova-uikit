@@ -25,6 +25,9 @@
     "build-storybook": "build-storybook -o docs-build",
     "copy-fonts": "node scripts/copy-fonts.js"
   },
+  "release": {
+    "branches": ["main"]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
