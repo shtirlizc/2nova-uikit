@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9000 -c .storybook watch-css -s ./src",
-    "build-storybook": "build-storybook -o docs-build"
+    "build-storybook": "build-storybook -o docs-build && npm run copy-fonts",
+    "copy-fonts": "node scripts/copy-fonts.js"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +50,8 @@
     "@storybook/react": "6.1.10",
     "@types/classnames": "^2.2.11",
     "babel-loader": "8.1.0",
-    "classnames": "^2.2.6"
+    "chalk": "^4.1.0",
+    "classnames": "^2.2.6",
+    "shelljs": "^0.8.4"
   }
 }
