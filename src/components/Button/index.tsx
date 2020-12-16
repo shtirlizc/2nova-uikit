@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import s from "./Button.module.css";
 
-type ButtonProps = {
+export type ButtonProps = {
   type?: "primary" | "secondary" | "outlined";
   size?: "sm" | "md" | "lg";
 };
