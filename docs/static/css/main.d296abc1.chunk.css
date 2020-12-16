@@ -1,0 +1,79 @@
+.Button_root__2bb-J {
+  --primary: #ffdd00;
+  --secondary: #2c343c;
+
+  --lg: 48px;
+  --md: 40px;
+  --sm: 32px;
+
+  background: none;
+  border: none;
+  box-shadow: none;
+
+  font-family: var(--fontHelvetica);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+
+  padding: 5px 30px 0;
+}
+
+.Button_root__2bb-J:focus {
+  outline: none;
+}
+
+/* types */
+
+.Button_primary__1mTxz {
+  background-color: var(--primary);
+  color: #2c343c;
+}
+
+.Button_primary__1mTxz:focus {
+  box-shadow: 0 0 2px 1px var(--primary);
+}
+
+.Button_secondary__2t2Od {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+.Button_secondary__2t2Od:focus {
+  box-shadow: 0 0 2px 1px var(--secondary);
+}
+
+.Button_outlined__1slbo {
+  color: #4e5c69;
+  background-color: #ffffff;
+  border: 1px solid #4e5c69;
+}
+
+.Button_outlined__1slbo:focus {
+  box-shadow: 0 0 2px 1px #4e5c69;
+}
+
+/* sizes */
+
+.Button_sm__ns8od {
+  height: var(--sm);
+  font-size: 12px;
+  line-height: 10px;
+}
+
+.Button_md__39LYy {
+  height: var(--md);
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.Button_lg__OTZ8R {
+  height: var(--lg);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+/*# sourceMappingURL=main.d296abc1.chunk.css.map*/
