@@ -10,7 +10,7 @@ export type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({
   type = "primary",
-  size = "md",
+  size = "sm",
   children,
 }) => {
   return (
