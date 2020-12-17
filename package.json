@@ -1,7 +1,7 @@
 {
   "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.0-development",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -17,17 +17,38 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "build:lib": "yarn build:babel && yarn build:types && node ./scripts/copy-ts.js",
+    "build:babel": "concurrently \"yarn build:babel:esm && yarn build:babel:umd\" \"yarn build:babel:cjs\"",
+    "build:babel:cjs": "BABEL_ENV=cjs babel --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/js --presets=@babel/env",
+    "build:babel:esm": "BABEL_ENV=esm babel --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/esm",
+    "build:babel:umd": "BABEL_ENV=umd babel --source-maps --extensions \".js\" dist/esm --out-dir dist/umd --plugins=transform-es2015-modules-umd",
+    "build:types": "tsc -p tsconfig.gen-dts.json",
+    "clean": "rimraf dist",
+    "develop": "yarn build:types && yarn build:babel:esm --skip-initial-build --watch --verbose",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9000 -c .storybook watch-css -s ./src",
     "build-storybook": "build-storybook -o docs-build",
-    "copy-fonts": "node scripts/copy-fonts.js"
+    "copy-fonts": "node scripts/copy-fonts.js",
+    "semantic-release": "semantic-release"
   },
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "pkgRoot": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/js/index.d.ts",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -55,15 +76,26 @@
     "@semantic-release/git"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-export-default-from": "^7.12.1",
     "@storybook/addon-docs": "6.1.10",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "6.1.10",
     "@types/classnames": "^2.2.11",
     "babel-loader": "8.1.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-plugin-typescript-to-proptypes": "^1.4.2",
     "chalk": "^4.1.0",
     "classnames": "^2.2.6",
+    "concurrently": "^5.3.0",
+    "react-docgen-typescript-loader": "^3.7.2",
     "semantic-release": "^17.3.0",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.4",
+    "ts-loader": "^8.0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shtirlizc/2nova-uikit.git"
   }
 }
