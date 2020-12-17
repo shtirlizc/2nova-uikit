@@ -15,7 +15,7 @@ jobs:
           yarn
           yarn build-storybook
           yarn copy-fonts
-          yarn build
+          yarn build:lib
       - name: Release Package
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
