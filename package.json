@@ -34,6 +34,10 @@
     "copy-fonts": "node scripts/copy-fonts.js",
     "semantic-release": "semantic-release"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
   "release": {
     "branches": [
       "main"
