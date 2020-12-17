@@ -38,9 +38,7 @@
     "access": "public"
   },
   "release": {
-    "branches": [
-      "main"
-    ]
+    "branches": ["main", {"name": "alpha", "prerelease": true}]
   },
   "files": [
     "dist"
