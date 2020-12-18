@@ -1,0 +1,17 @@
+@import "./fonts/HelveticaNeue/stylesheet.css";
+
+:root {
+  --fontHelvetica: "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fontHelvetica);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
