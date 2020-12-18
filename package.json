@@ -12,10 +12,12 @@
   "scripts": {
     "build:lib": "yarn build:babel && yarn build:types && node ./scripts/copy-ts.js",
     "build:babel": "concurrently \"yarn build:babel:esm && yarn build:babel:umd\" \"yarn build:babel:cjs\"",
+    "build:esm": "tsc -p tsconfig.gen-dts.json --module es6 --outDir \"./dist/es6\"",
+    "build:cjs": "tsc -p tsconfig.gen-dts.json --module commonjs",
+    "build:types": "tsc -p tsconfig.gen-dts.json",
     "build:babel:cjs": "BABEL_ENV=cjs babel --copy-files --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/js --presets=@babel/env",
     "build:babel:esm": "BABEL_ENV=esm babel --copy-files --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/esm",
     "build:babel:umd": "BABEL_ENV=umd babel --copy-files --source-maps --extensions \".js\" dist/esm --out-dir dist/umd --plugins=transform-es2015-modules-umd",
-    "build:types": "tsc -p tsconfig.gen-dts.json",
     "clean": "rimraf dist",
     "develop": "yarn build:types && yarn build:babel:esm --skip-initial-build --watch --verbose",
     "storybook": "start-storybook -p 9000 -c .storybook watch-css -s ./src",
