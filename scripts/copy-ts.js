@@ -27,9 +27,11 @@ const copyPackageJson = async (distPath) => {
     delete pack.browserslist;
     delete pack.release;
     delete pack.plugins;
+    delete pack.files;
 
     const out  = `${distPath}/package.json`;
-    await fse.writeJSON(out, pack, { space: 2 });
+    const packModules = {...pack, files: ["js", "umd", "esm"]};
+    await fse.writeJSON(out, packModules, { space: 2 });
 }
 
 (async () => {
