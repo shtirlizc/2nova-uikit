@@ -3,7 +3,7 @@ import React from "react";
 import { PieChart } from "./index";
 
 const PieChartStory = {
-  title: "Button",
+  title: "PieChart",
   component: PieChart,
 };
 
