@@ -91,7 +91,7 @@
     "semantic-release": "^17.3.0",
     "shelljs": "^0.8.4",
     "ts-loader": "^8.0.12",
-    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
