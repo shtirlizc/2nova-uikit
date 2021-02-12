@@ -32,16 +32,16 @@
 }
 
 .td span {
-  background: #eee;
-  color: dimgrey;
+  background-color: #eeeff1;
   display: none;
-  font-size: 10px;
-  font-weight: bold;
-  padding: 5px;
   position: absolute;
-  text-transform: uppercase;
   top: 0;
   left: 0;
+  padding: 6px 8px 4px;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.15px;
+  color: #3f4954;
 }
 
 @media (max-width: 800px) {
@@ -55,17 +55,36 @@
     border-bottom: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
   }
 
   .td {
-    border: 1px solid;
+    border: 1px solid #eeeff1;
     margin: 0 -1px -1px 0;
-    padding-top: 35px;
+    padding: 32px 8px 8px;
     position: relative;
   }
 
   .td span {
     display: block;
+  }
+
+  .tdNumber {
+    display: none;
+  }
+
+  .tdRowName {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: none;
+    padding-top: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+  }
+
+  .tdRowName span {
+    display: none;
   }
 }

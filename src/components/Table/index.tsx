@@ -1,11 +1,12 @@
 import React, { ReactElement } from "react";
+import classNames from "classnames";
 
 import s from "./Table.module.css";
 
 const TableContext = React.createContext({});
 
 type TdProps = {
-  colNumber: number;
+  colNumber?: number;
 };
 
 export const Td: React.FC<TdProps> = ({ colNumber, children }) => {
@@ -13,7 +14,14 @@ export const Td: React.FC<TdProps> = ({ colNumber, children }) => {
     <TableContext.Consumer>
       {(columns) => {
         return (
-          <td className={s.td}>
+          <td
+            className={classNames(
+              s.td,
+              colNumber === 0 && s.tdNumber,
+              colNumber === 1 && s.tdRowName
+            )}
+          >
+            {/* @ts-ignore */}
             {columns && <span>{columns[colNumber]}</span>}
             {children}
           </td>
@@ -31,7 +39,7 @@ export const Tr: React.FC = ({ children }) => {
   return (
     <tr className={s.tr}>
       {/* @ts-ignore */}
-      {children?.map((cell: ReactElement, idx: number) => (
+      {children?.flat().map((cell: ReactElement, idx: number) => (
         <Td key={idx} colNumber={idx}>
           {cell.props.children}
         </Td>

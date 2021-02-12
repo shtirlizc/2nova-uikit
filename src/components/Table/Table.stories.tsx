@@ -6,52 +6,52 @@ const SelectStory = {
   component: Table,
 };
 
+const data = {
+  head: [
+    "№",
+    "Адрес",
+    "Зарегистрированы / Всего",
+    "Факт / План по переводам",
+    "Активный статус",
+    "Совершают переводы",
+  ],
+  body: [
+    [
+      "3891 Ranchview Dr. Richardson, California 62639",
+      "10/20",
+      "10/20",
+      "8",
+      "19",
+    ],
+    ["2715 Ash Dr. San Jose, South Dakota 83475", "10/20", "10/20", "19", "13"],
+    [
+      "3891 Ranchview Dr. Richardson, California 62639",
+      "10/20",
+      "10/20",
+      "17",
+      "12",
+    ],
+  ],
+};
+
 export const Basic = () => (
-  <Table
-    columns={[
-      "№",
-      "Адрес",
-      "Зарегистрированы / Всего",
-      "Факт / План по переводам",
-      "Активный статус",
-      "Совершают переводы",
-    ]}
-  >
+  <Table columns={data.head}>
     <Thead>
       <Tr>
-        <Th>№</Th>
-        <Th>Адрес</Th>
-        <Th>Зарегистрированы / Всего</Th>
-        <Th>Факт / План по переводам</Th>
-        <Th>Активный статус</Th>
-        <Th>Совершают переводы</Th>
+        {data.head.map((th, idx) => (
+          <Th key={idx}>{th}</Th>
+        ))}
       </Tr>
     </Thead>
     <Tbody>
-      <Tr>
-        <Td>1</Td>
-        <Td>3891 Ranchview Dr. Richardson, California 62639</Td>
-        <Td>10/20</Td>
-        <Td>10/20</Td>
-        <Td>8</Td>
-        <Td>19</Td>
-      </Tr>
-      <Tr>
-        <Td>2</Td>
-        <Td>2715 Ash Dr. San Jose, South Dakota 83475</Td>
-        <Td>10/20</Td>
-        <Td>10/20</Td>
-        <Td>19</Td>
-        <Td>13</Td>
-      </Tr>
-      <Tr>
-        <Td>3</Td>
-        <Td>3891 Ranchview Dr. Richardson, California 62639</Td>
-        <Td>10/20</Td>
-        <Td>10/20</Td>
-        <Td>17</Td>
-        <Td>12</Td>
-      </Tr>
+      {data.body.map((row, index) => (
+        <Tr key={index}>
+          <Td>{index + 1}</Td>
+          {row.map((td, idx) => (
+            <Td key={idx}>{td}</Td>
+          ))}
+        </Tr>
+      ))}
     </Tbody>
   </Table>
 );
