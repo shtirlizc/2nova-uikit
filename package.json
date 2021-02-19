@@ -3,6 +3,8 @@
   "version": "0.0.0-development",
   "private": false,
   "dependencies": {
+    "@antv/data-set": "^0.11.8",
+    "@antv/g2": "^4.1.11",
     "@types/react-select": "^4.0.13",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
