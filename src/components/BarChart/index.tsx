@@ -3,12 +3,12 @@ import { Chart } from '@antv/g2';
 
 
 export type BarChartProps = {
-    height: number;
+    height?: number;
     data: any [];
-    container: string;
+    container?: string;
 };
 
-export const BarChart: React.FC<BarChartProps> = ({ data = [] , height = 300, container = "chart"}) => {
+export const BarChart: React.FC<BarChartProps> = ({ data = [] , height = 300, container}) => {
     let chart: Chart;
 
     useEffect(() => {
@@ -24,8 +24,7 @@ export const BarChart: React.FC<BarChartProps> = ({ data = [] , height = 300, co
         }
 
         chart = new Chart({
-            container,
-            autoFit: false,
+            container: container || "chart",
             height,
             width: 615
         });
