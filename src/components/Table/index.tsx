@@ -1,69 +1,63 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import classNames from "classnames";
 
 import s from "./Table.module.css";
 
-const TableContext = React.createContext({});
-
-type TdProps = {
-  colNumber?: number;
-};
-
-export const Td: React.FC<TdProps> = ({ colNumber, children }) => {
-  return (
-    <TableContext.Consumer>
-      {(columns) => {
-        return (
-          <td
-            className={classNames(
-              s.td,
-              colNumber === 0 && s.tdNumber,
-              colNumber === 1 && s.tdRowName
-            )}
-          >
-            {/* @ts-ignore */}
-            {columns && <span>{columns[colNumber]}</span>}
-            {children}
-          </td>
-        );
-      }}
-    </TableContext.Consumer>
-  );
-};
-
-export const Th: React.FC = ({ children }) => {
-  return <th className={s.th}>{children}</th>;
-};
-
-export const Tr: React.FC = ({ children }) => {
-  return (
-    <tr className={s.tr}>
-      {/* @ts-ignore */}
-      {children?.flat().map((cell: ReactElement, idx: number) => (
-        <Td key={idx} colNumber={idx}>
-          {cell.props.children}
-        </Td>
-      ))}
-    </tr>
-  );
-};
-
-export const Thead: React.FC = ({ children }) => {
-  return <thead className={s.thead}>{children}</thead>;
-};
-
-export const Tbody: React.FC = ({ children }) => {
-  return <tbody className={s.tbody}>{children}</tbody>;
+type HeadCellType = {
+  id: number;
+  field: string;
+  headerName: string;
 };
 
 type TableProps = {
-  columns?: string[];
+  columns: HeadCellType[];
+  rows: object[];
 };
 
-export const Table: React.FC<TableProps> = ({ columns, children }) => {
+export const Table: React.FC<TableProps> = ({ columns, rows }) => {
+  console.log("###: rows", rows);
+
   return (
-    <TableContext.Provider value={columns || []}>
-      <table className={s.table}>{children}</table>
-    </TableContext.Provider>
+    <table className={s.table}>
+      <thead className={s.thead}>
+        <tr>
+          {columns.map(({ id, headerName }) => (
+            <th key={id} className={s.th}>
+              {headerName}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row) => {
+          const [key] = Object.values(row);
+
+          return (
+            <tr key={key} className={s.tr}>
+              {Object.entries(row).map((td, idx) => {
+                const [field, value] = td;
+                const [currentColumn] = columns.filter(
+                  (col) => col.field === field
+                );
+
+                if (field === "id") {
+                  return null;
+                }
+
+                return (
+                  <td
+                    key={field}
+                    className={classNames(s.td, idx === 1 && s.tdRowName)}
+                  >
+                    <span>{currentColumn.headerName}</span>
+                    {value}
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   );
 };
