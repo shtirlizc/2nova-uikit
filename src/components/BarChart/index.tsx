@@ -4,22 +4,23 @@ import { Chart } from '@antv/g2';
 
 export type BarChartProps = {
     height?: number;
-    data: any [];
+    data: any[];
     container?: string;
+    colors?: Array<string>
 };
 
-export const BarChart: React.FC<BarChartProps> = ({ data = [] , height = 300, container}) => {
+export const BarChart: React.FC<BarChartProps> = ({ data = [], height = 300, container, colors = ['#FFDD00', '#D3D9DE'] }) => {
     let chart: Chart;
 
     useEffect(() => {
-        if(!chart) return;
+        if (!chart) return;
         chart.changeData(data);
     }, [data])
 
 
     useEffect(() => {
 
-        if(chart) {
+        if (chart) {
             chart.destroy();
         }
 
@@ -43,9 +44,9 @@ export const BarChart: React.FC<BarChartProps> = ({ data = [] , height = 300, co
                 }
             },
             line: {
-              style: {
-                  stroke: '#D3D9DE'
-              }
+                style: {
+                    stroke: '#D3D9DE'
+                }
             },
             grid: {
                 line: {
@@ -60,7 +61,7 @@ export const BarChart: React.FC<BarChartProps> = ({ data = [] , height = 300, co
         chart
             .interval()
             .position('name*value')
-            .color('type', ['#FFDD00', '#D3D9DE'])
+            .color('type', colors)
             .adjust('stack')
             .label('value', (val) => {
                 return {
@@ -70,7 +71,7 @@ export const BarChart: React.FC<BarChartProps> = ({ data = [] , height = 300, co
                         return originData.value;
                     },
                     style: {
-                        stroke: '#fff'
+                        fill: '#5E7080'
                     }
                 };
             });
@@ -83,5 +84,5 @@ export const BarChart: React.FC<BarChartProps> = ({ data = [] , height = 300, co
     }, []);
 
 
-    return <div id="chart"/>
+    return <div id="chart" />
 };

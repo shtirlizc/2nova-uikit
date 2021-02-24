@@ -41,7 +41,7 @@ const departments = [
 ];
 
 
-const data = departments.reduce<any []>((acc, cur) => {
+const data = departments.reduce<any[]>((acc, cur) => {
 
     acc.push({
         name: cur.name,
@@ -59,6 +59,6 @@ const data = departments.reduce<any []>((acc, cur) => {
 }, []);
 
 
-export const BarChart = () => <Chart data={data} height={300}/>;
+export const BarChart = () => <Chart colors={['#26ADE4', '#D3D9DE']} data={data} height={300} />;
 
 export default BarChartStory;
