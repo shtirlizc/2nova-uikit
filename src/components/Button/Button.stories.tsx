@@ -12,4 +12,10 @@ export const Secondary = () => <Button type="secondary">Button</Button>;
 
 export const Large = () => <Button size="lg">Button</Button>;
 
+export const FullWidth = () => (
+  <div style={{ maxWidth: 400 }}>
+    <Button fullWidth>Button</Button>
+  </div>
+);
+
 export default ButtonStory;
