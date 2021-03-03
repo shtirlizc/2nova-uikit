@@ -18,4 +18,16 @@ export const FullWidth = () => (
   </div>
 );
 
+export const Disabled = () => (
+  <Button size="lg" disabled>
+    Button
+  </Button>
+);
+
+export const Loading = () => (
+  <Button size="lg" isLoading>
+    Button
+  </Button>
+);
+
 export default ButtonStory;
