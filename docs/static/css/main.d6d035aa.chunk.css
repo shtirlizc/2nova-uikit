@@ -17,6 +17,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-gap: 8px;
+  gap: 8px;
   font-weight: 500;
   letter-spacing: 0.25px;
   cursor: pointer;
@@ -56,6 +58,10 @@
   background-color: var(--secondary-hover);
 }
 
+.Button_secondary__2t2Od svg path {
+  fill: #ffffff;
+}
+
 .Button_outlined__1slbo {
   color: #4e5c69;
   background-color: #ffffff;
@@ -88,6 +94,12 @@
 
 .Button_fullWidth__1dcpM {
   width: 100%;
+}
+
+.Button_disabled__2c3jr,
+.Button_isLoading__3BkAW {
+  opacity: 0.5;
+  cursor: default;
 }
 
 .PieChart_root__3OWnC {
@@ -230,4 +242,4 @@
 }
 
 
-/*# sourceMappingURL=main.957cf8d9.chunk.css.map*/
+/*# sourceMappingURL=main.d6d035aa.chunk.css.map*/
