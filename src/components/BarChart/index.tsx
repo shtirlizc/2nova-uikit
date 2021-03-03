@@ -72,7 +72,11 @@ export const BarChart: React.FC<BarChartProps> = ({
           position: "middle",
           offset: 0,
           content: (originData) => {
-            return originData.value;
+            if (originData.value > 0) {
+              return originData.value;
+            }
+
+            return "";
           },
           style: {
             fill: "#5E7080",
