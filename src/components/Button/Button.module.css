@@ -10,8 +10,10 @@
   --md: 40px;
   --sm: 32px;
 
+  --font-hack: 4px;
+  --font-hack-with-border: calc(var(--font-hack) + 2px);
+
   background: none;
-  border: none;
   box-shadow: none;
 
   position: relative;
@@ -20,9 +22,11 @@
   border-radius: 2px;
   cursor: pointer;
   padding: 0 30px;
-  padding-top: 4px;
+  padding-top: var(--font-hack);
+  border: 1px solid transparent;
   letter-spacing: 0.25px;
-  transition: all 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out,
+    background 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .root:focus {
@@ -74,7 +78,7 @@
 .outlined {
   color: #4e5c69;
   background-color: #ffffff;
-  border: 1px solid #4e5c69;
+  border-color: #4e5c69;
 }
 
 .outlined:focus {
@@ -84,17 +88,17 @@
 /* sizes */
 
 .sm {
-  line-height: calc(var(--sm) - 4px);
+  line-height: calc(var(--sm) - var(--font-hack-with-border));
   font-size: 12px;
 }
 
 .md {
-  line-height: calc(var(--md) - 4px);
+  line-height: calc(var(--md) - var(--font-hack-with-border));
   font-size: 14px;
 }
 
 .lg {
-  line-height: calc(var(--lg) - 4px);
+  line-height: calc(var(--lg) - var(--font-hack-with-border));
   font-size: 16px;
 }
 
