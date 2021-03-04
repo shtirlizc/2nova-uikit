@@ -15,7 +15,7 @@ export type ButtonProps = {
 
 export const Button: React.FC<ButtonProps> = ({
   type = "primary",
-  size = "sm",
+  size = "md",
   fullWidth = false,
   isLoading = false,
   disabled = false,
@@ -35,7 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
       disabled={disabled || isLoading}
       onClick={onClick}
     >
-      <Preloader />
+      {isLoading && <Preloader />}
       {children}
     </button>
   );
