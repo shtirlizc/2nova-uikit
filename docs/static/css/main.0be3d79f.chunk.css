@@ -1,3 +1,24 @@
+/*@import "./fonts/HelveticaNeue/stylesheet.css";*/
+
+:root {
+  --font: -apple-system, Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 .Button_root__2bb-J {
   --primary: #ffdd00;
   --primary-hover: #ffe74d;
@@ -12,22 +33,29 @@
   border: none;
   box-shadow: none;
 
-  font-family: var(--fontHelvetica);
+  position: relative;
+  display: inline-block;
+  font: 500 1.2em var(--font);
   border-radius: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-gap: 8px;
-  gap: 8px;
-  font-weight: 500;
-  letter-spacing: 0.25px;
   cursor: pointer;
-  padding: 5px 30px 0;
+  padding: 0 30px;
+  padding-top: 4px;
+  letter-spacing: 0.25px;
   transition: all 0.2s ease-in-out;
 }
 
 .Button_root__2bb-J:focus {
   outline: none;
+}
+
+.Button_root__2bb-J svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 /* types */
@@ -75,21 +103,18 @@
 /* sizes */
 
 .Button_sm__ns8od {
-  height: var(--sm);
+  line-height: calc(var(--sm) - 4px);
   font-size: 12px;
-  line-height: 10px;
 }
 
 .Button_md__39LYy {
-  height: var(--md);
+  line-height: calc(var(--md) - 4px);
   font-size: 14px;
-  line-height: 16px;
 }
 
 .Button_lg__OTZ8R {
-  height: var(--lg);
+  line-height: calc(var(--lg) - 4px);
   font-size: 16px;
-  line-height: 24px;
 }
 
 .Button_fullWidth__1dcpM {
@@ -100,6 +125,14 @@
 .Button_isLoading__3BkAW {
   opacity: 0.5;
   cursor: default;
+}
+
+.Button_isLoading__3BkAW {
+  color: transparent;
+}
+
+.Button_isLoading__3BkAW svg {
+  opacity: 1;
 }
 
 .PieChart_root__3OWnC {
@@ -242,4 +275,4 @@
 }
 
 
-/*# sourceMappingURL=main.d6d035aa.chunk.css.map*/
+/*# sourceMappingURL=main.0be3d79f.chunk.css.map*/
