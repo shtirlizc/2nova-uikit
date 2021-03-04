@@ -1,5 +1,3 @@
-/*@import "./fonts/HelveticaNeue/stylesheet.css";*/
-
 :root {
   --font: -apple-system, Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
@@ -29,8 +27,10 @@ code {
   --md: 40px;
   --sm: 32px;
 
+  --font-hack: 4px;
+  --font-hack-with-border: calc(var(--font-hack) + 2px);
+
   background: none;
-  border: none;
   box-shadow: none;
 
   position: relative;
@@ -39,9 +39,11 @@ code {
   border-radius: 2px;
   cursor: pointer;
   padding: 0 30px;
-  padding-top: 4px;
+  padding-top: var(--font-hack);
+  border: 1px solid transparent;
   letter-spacing: 0.25px;
-  transition: all 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out,
+    background 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .Button_root__2bb-J:focus {
@@ -93,7 +95,7 @@ code {
 .Button_outlined__1slbo {
   color: #4e5c69;
   background-color: #ffffff;
-  border: 1px solid #4e5c69;
+  border-color: #4e5c69;
 }
 
 .Button_outlined__1slbo:focus {
@@ -103,17 +105,17 @@ code {
 /* sizes */
 
 .Button_sm__ns8od {
-  line-height: calc(var(--sm) - 4px);
+  line-height: calc(var(--sm) - var(--font-hack-with-border));
   font-size: 12px;
 }
 
 .Button_md__39LYy {
-  line-height: calc(var(--md) - 4px);
+  line-height: calc(var(--md) - var(--font-hack-with-border));
   font-size: 14px;
 }
 
 .Button_lg__OTZ8R {
-  line-height: calc(var(--lg) - 4px);
+  line-height: calc(var(--lg) - var(--font-hack-with-border));
   font-size: 16px;
 }
 
@@ -275,4 +277,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.0be3d79f.chunk.css.map*/
+/*# sourceMappingURL=main.b947acb9.chunk.css.map*/
