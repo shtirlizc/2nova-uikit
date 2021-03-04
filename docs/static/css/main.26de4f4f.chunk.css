@@ -1,12 +1,12 @@
 :root {
-  --font: -apple-system, Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+  --font: Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+  font-family: Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, sans-serif;
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -277,4 +277,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.b947acb9.chunk.css.map*/
+/*# sourceMappingURL=main.26de4f4f.chunk.css.map*/
