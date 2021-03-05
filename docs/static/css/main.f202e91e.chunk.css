@@ -35,13 +35,14 @@ code {
 
   position: relative;
   display: inline-block;
+  text-align: center;
   font: 500 1.2em var(--font);
   border-radius: 2px;
   cursor: pointer;
   padding: 0 30px;
   padding-top: var(--font-hack);
   border: 1px solid transparent;
-  letter-spacing: 0.25px;
+  white-space: nowrap;
   transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out,
     background 0.2s ease-in-out, border 0.2s ease-in-out;
 }
@@ -121,6 +122,8 @@ code {
 
 .Button_fullWidth__1dcpM {
   width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .Button_disabled__2c3jr,
@@ -277,4 +280,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.26de4f4f.chunk.css.map*/
+/*# sourceMappingURL=main.f202e91e.chunk.css.map*/
