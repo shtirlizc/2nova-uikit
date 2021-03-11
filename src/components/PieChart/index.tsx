@@ -22,13 +22,20 @@ export const PieChart: React.FC<PieChartProps> = ({
   const radius = size / 2 - strokeWidth / 2;
   const circumference = 2 * Math.PI * radius;
 
+  let correctProgress = progress;
+  if (progress > 100) {
+    correctProgress = 100;
+  } else if (progress < 0) {
+    correctProgress = 0;
+  }
+
   const circleRef = useRef(null);
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-    const progressOffset = ((100 - progress) / 100) * circumference;
+    const progressOffset = ((100 - correctProgress) / 100) * circumference;
     setOffset(progressOffset);
-  }, [setOffset, circumference, progress, offset]);
+  }, [setOffset, circumference, correctProgress, offset]);
 
   return (
     <div className={s.root}>
@@ -54,7 +61,7 @@ export const PieChart: React.FC<PieChartProps> = ({
         />
       </svg>
       <div className={s.text}>
-        <h4 className={s.textProgress}>{progress}%</h4>
+        <h4 className={s.textProgress}>{correctProgress}%</h4>
         {children && <p className={s.textDescription}>{children}</p>}
       </div>
     </div>
