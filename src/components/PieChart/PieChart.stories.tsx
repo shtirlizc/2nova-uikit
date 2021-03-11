@@ -8,7 +8,7 @@ const PieChartStory = {
 };
 
 export const Basic = () => (
-  <PieChart progress={75}>операторов зарег-но</PieChart>
+  <PieChart progress={25}>операторов зарег-но</PieChart>
 );
 
 export default PieChartStory;
