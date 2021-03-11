@@ -1,21 +1,37 @@
-import _pt from "prop-types";
-import React from "react";
-import classNames from "classnames";
-import s from "./Button.module.css";
+"use strict";
 
-const Button = ({
-  type = "primary",
-  size = "sm",
-  children
-}) => {
-  return /*#__PURE__*/React.createElement("button", {
-    className: classNames(s.root, s[type], s[size])
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Button = void 0;
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _ButtonModule = _interopRequireDefault(require("./Button.module.css"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Button = function Button(_ref) {
+  var _ref$type = _ref.type,
+      type = _ref$type === void 0 ? "primary" : _ref$type,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? "sm" : _ref$size,
+      onClick = _ref.onClick,
+      children = _ref.children;
+  return /*#__PURE__*/_react.default.createElement("button", {
+    className: (0, _classnames.default)(_ButtonModule.default.root, _ButtonModule.default[type], _ButtonModule.default[size]),
+    onClick: onClick
   }, children);
 };
 
+exports.Button = Button;
 Button.propTypes = {
-  type: _pt.oneOf(["primary", "secondary", "outlined"]),
-  size: _pt.oneOf(["sm", "md", "lg", "xl"])
+  type: _propTypes.default.oneOf(["primary", "secondary", "outlined"]),
+  size: _propTypes.default.oneOf(["sm", "md", "lg", "xl"]),
+  onClick: _propTypes.default.func
 };
-export default Button;
 //# sourceMappingURL=index.js.map

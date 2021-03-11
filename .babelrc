@@ -1,5 +1,15 @@
 {
-  "presets": ["@babel/react"],
+  "presets": [
+    ["@babel/preset-env", 
+      {
+        "targets": 
+        {
+          "ie": "11" 
+        } 
+      }
+    ], 
+    ["@babel/react"]
+  ],
   "ignore": ["**/__snapshots__", "**/*.d.ts", "**/*.test.*"],
   "plugins": [
     "@babel/plugin-transform-typescript",
