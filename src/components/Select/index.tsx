@@ -46,22 +46,32 @@ const styles = {
 };
 
 interface ISelectItem {
-  value: string;
+  value: string | number;
   label: string;
 }
 
 type SelectCommonProps = {
   options: ISelectItem[];
+  defaultValue?: ISelectItem;
+  placeholder?: string;
   onChange?: (event: any) => void;
 };
 
 export const SelectCommon: React.FC<SelectCommonProps> = ({
   options,
+  defaultValue,
+  placeholder,
   onChange,
 }) => {
   return (
     <div className={s.root}>
-      <Select styles={styles} options={options} onChange={onChange} />
+      <Select
+        styles={styles}
+        options={options}
+        defaultValue={defaultValue}
+        placeholder={placeholder}
+        onChange={onChange}
+      />
     </div>
   );
 };
