@@ -315,10 +315,14 @@ code {
   transition: background-color 0.2s ease-in-out;
 }
 
+.Tabs_tab__2wXzT:focus {
+  outline: 0;
+}
+
 .Tabs_tab__2wXzT.Tabs_active__1v0tH,
 .Tabs_tab__2wXzT:hover {
   background-color: #ffdd00;
 }
 
 
-/*# sourceMappingURL=main.0a4b2bb9.chunk.css.map*/
+/*# sourceMappingURL=main.c0d1cb12.chunk.css.map*/
