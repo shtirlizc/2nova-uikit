@@ -293,5 +293,35 @@ code {
   }
 }
 
+.Tabs_root__1Lwap {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2px;
+  overflow: hidden;
+}
 
-/*# sourceMappingURL=main.2c15e0c4.chunk.css.map*/
+.Tabs_tab__2wXzT {
+  border: none;
+  outline: 0;
+
+  background-color: #eeeff1;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 32px;
+  padding: 4px 12px 0;
+  /* Grey/90 */
+  color: #2c343c;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.Tabs_tab__2wXzT.Tabs_active__1v0tH,
+.Tabs_tab__2wXzT:hover {
+  background-color: #ffdd00;
+}
+
+
+/*# sourceMappingURL=main.3068b8f2.chunk.css.map*/
