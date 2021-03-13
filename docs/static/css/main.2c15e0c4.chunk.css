@@ -194,6 +194,16 @@ code {
 .Select_root__1c3JW {
 }
 
+.Table_root__3ukJ8 {
+  background: #ffffff;
+  border: 1px solid #eeeff1;
+  border-radius: 2px;
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: calc(100vh - 150px);
+  min-height: 500px;
+}
+
 .Table_table__3cVv6 {
   width: 100%;
   border-collapse: collapse;
@@ -211,6 +221,10 @@ code {
   color: #4e5c69;
   padding: 12px 20px;
   text-align: left;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .Table_td__aBNTH {
@@ -280,4 +294,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.5b63acc5.chunk.css.map*/
+/*# sourceMappingURL=main.2c15e0c4.chunk.css.map*/
