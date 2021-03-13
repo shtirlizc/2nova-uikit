@@ -209,10 +209,6 @@ code {
   border-collapse: collapse;
 }
 
-.Table_thead__1OMLY {
-  border-bottom: 1px solid #eeeff1;
-}
-
 .Table_th__2sVy3 {
   font-weight: bold;
   font-size: 12px;
@@ -225,6 +221,7 @@ code {
   position: sticky;
   top: 0;
   background-color: white;
+  box-shadow: inset 0px -1px 0 0px #eeeff1;
 }
 
 .Table_td__aBNTH {
@@ -324,4 +321,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.3068b8f2.chunk.css.map*/
+/*# sourceMappingURL=main.0a4b2bb9.chunk.css.map*/
