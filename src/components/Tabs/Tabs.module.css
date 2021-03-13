@@ -23,6 +23,10 @@
   transition: background-color 0.2s ease-in-out;
 }
 
+.tab:focus {
+  outline: 0;
+}
+
 .tab.active,
 .tab:hover {
   background-color: #ffdd00;
