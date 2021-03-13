@@ -13,10 +13,6 @@
   border-collapse: collapse;
 }
 
-.thead {
-  border-bottom: 1px solid #eeeff1;
-}
-
 .th {
   font-weight: bold;
   font-size: 12px;
@@ -28,6 +24,7 @@
   position: sticky;
   top: 0;
   background-color: white;
+  box-shadow: inset 0px -1px 0 0px #eeeff1;
 }
 
 .td {
