@@ -201,7 +201,7 @@ code {
   overflow: hidden;
   overflow-y: scroll;
   max-height: calc(100vh - 150px);
-  min-height: 500px;
+  min-height: 80px;
 }
 
 .Table_table__3cVv6 {
@@ -325,4 +325,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.c0d1cb12.chunk.css.map*/
+/*# sourceMappingURL=main.91433530.chunk.css.map*/
