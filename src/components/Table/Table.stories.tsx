@@ -40,6 +40,6 @@ const rows = [
   },
 ];
 
-export const Basic = () => <Table columns={columns} rows={rows} />;
+export const Basic = () => <Table columns={columns} rows={rows} withNumbers />;
 
 export default SelectStory;
