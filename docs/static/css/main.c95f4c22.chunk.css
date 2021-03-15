@@ -200,13 +200,17 @@ code {
   border-radius: 2px;
   overflow: hidden;
   overflow-y: scroll;
-  max-height: calc(100vh - 150px);
+  max-height: calc(100vh - 160px);
   min-height: 80px;
 }
 
 .Table_table__3cVv6 {
   width: 100%;
   border-collapse: collapse;
+}
+
+.Table_trDisabled__2NHQ- {
+  background-color: #eeeeee;
 }
 
 .Table_th__2sVy3 {
@@ -221,7 +225,7 @@ code {
   position: sticky;
   top: 0;
   background-color: white;
-  box-shadow: inset 0px -1px 0 0px #eeeff1;
+  box-shadow: inset 0 -1px 0 0 #eeeff1;
 }
 
 .Table_td__aBNTH {
@@ -245,6 +249,11 @@ code {
   color: #3f4954;
 }
 
+.Table_trDisabled__2NHQ- td,
+.Table_trDisabled__2NHQ- span {
+  color: #aaaaaa;
+}
+
 @media (max-width: 800px) {
   .Table_thead__1OMLY {
     left: -9999px;
@@ -256,6 +265,9 @@ code {
     border-bottom: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .Table_tr__12T8R:not(:last-child) {
     margin-bottom: 28px;
   }
 
@@ -325,4 +337,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.91433530.chunk.css.map*/
+/*# sourceMappingURL=main.c95f4c22.chunk.css.map*/
