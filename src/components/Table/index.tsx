@@ -9,9 +9,13 @@ type HeadCellType = {
   headerName: string;
 };
 
+type RowType = {
+  disabled?: any;
+};
+
 type TableProps = {
   columns: HeadCellType[];
-  rows: object[];
+  rows: RowType[];
   withNumbers?: boolean;
 };
 
@@ -36,9 +40,13 @@ export const Table: React.FC<TableProps> = ({
         <tbody>
           {rows.map((row, index) => {
             const [key] = Object.values(row);
+            const isDisabled = Boolean(row?.disabled);
 
             return (
-              <tr key={key} className={s.tr}>
+              <tr
+                key={key}
+                className={classNames(s.tr, isDisabled && s.trDisabled)}
+              >
                 {withNumbers && (
                   <td className={classNames(s.td, s.tdNumber)}>{index + 1}</td>
                 )}
@@ -49,6 +57,10 @@ export const Table: React.FC<TableProps> = ({
                   );
 
                   if (field === "id") {
+                    return null;
+                  }
+
+                  if (!currentColumn?.headerName) {
                     return null;
                   }
 

@@ -21,6 +21,7 @@ const rows = [
     plan: "10/20",
     active: "8",
     process: "19",
+    disabled: false,
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ const rows = [
     plan: "10/20",
     active: "19",
     process: "13",
+    disabled: 1,
   },
   {
     id: 3,
