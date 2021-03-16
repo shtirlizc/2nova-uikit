@@ -198,10 +198,6 @@ code {
   background: #ffffff;
   border: 1px solid #eeeff1;
   border-radius: 2px;
-  overflow: hidden;
-  overflow-y: scroll;
-  max-height: calc(100vh - 160px);
-  min-height: 80px;
 }
 
 .Table_table__3cVv6 {
@@ -337,4 +333,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.c95f4c22.chunk.css.map*/
+/*# sourceMappingURL=main.fdcb3075.chunk.css.map*/
