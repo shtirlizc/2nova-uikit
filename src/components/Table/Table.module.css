@@ -2,10 +2,6 @@
   background: #ffffff;
   border: 1px solid #eeeff1;
   border-radius: 2px;
-  overflow: hidden;
-  overflow-y: scroll;
-  max-height: calc(100vh - 160px);
-  min-height: 80px;
 }
 
 .table {
