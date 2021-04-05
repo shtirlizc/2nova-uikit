@@ -66,7 +66,6 @@ export const BarChart: React.FC<BarChartProps> = ({
       .position("name*value")
       .color("type", colors)
       .adjust("stack")
-
       .label("value", (val) => {
         return {
           position: "middle",
@@ -86,6 +85,10 @@ export const BarChart: React.FC<BarChartProps> = ({
 
     chart.legend({
       position: "bottom",
+    });
+
+    chart.axis("name", {
+      label: null,
     });
 
     chart.render();
