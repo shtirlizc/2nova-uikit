@@ -103,6 +103,16 @@ code {
   box-shadow: 0 0 2px 1px #4e5c69;
 }
 
+.Button_outlined-light__3hr8C {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+.Button_outlined-light__3hr8C:focus {
+  box-shadow: 0 0 2px 1px #4e5c69;
+}
+
 /* sizes */
 
 .Button_sm__ns8od {
@@ -333,4 +343,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.fdcb3075.chunk.css.map*/
+/*# sourceMappingURL=main.1f0bf0c4.chunk.css.map*/
