@@ -5,7 +5,7 @@ import { ReactComponent as Preloader } from "./loading.svg";
 import s from "./Button.module.css";
 
 export type ButtonProps = {
-  type?: "primary" | "secondary" | "outlined";
+  type?: "primary" | "secondary" | "outlined" | "outlined-light";
   size?: "sm" | "md" | "lg" | "xl";
   fullWidth?: boolean;
   isLoading?: boolean;
