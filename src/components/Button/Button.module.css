@@ -96,6 +96,11 @@
   box-shadow: 0 0 2px 1px #4e5c69;
 }
 
+.outlined-light:hover {
+  background-color: #ffffff;
+  color: #4e5c69;
+}
+
 /* sizes */
 
 .sm {
