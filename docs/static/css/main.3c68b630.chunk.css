@@ -113,6 +113,11 @@ code {
   box-shadow: 0 0 2px 1px #4e5c69;
 }
 
+.Button_outlined-light__3hr8C:hover {
+  background-color: #ffffff;
+  color: #4e5c69;
+}
+
 /* sizes */
 
 .Button_sm__ns8od {
@@ -343,4 +348,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.1f0bf0c4.chunk.css.map*/
+/*# sourceMappingURL=main.3c68b630.chunk.css.map*/
