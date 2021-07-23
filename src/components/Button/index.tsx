@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { ReactComponent as Preloader } from "./loading.svg";
+import { ReactComponent as Preloader } from "./assets/loading.svg";
 
 import s from "./Button.module.css";
 
