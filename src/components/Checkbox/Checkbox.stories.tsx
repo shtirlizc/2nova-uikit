@@ -1,6 +1,8 @@
 import React from "react";
+
 import { Form, FormGroup } from "../Form";
 import { Checkbox } from "./index";
+import { Button } from "../Button";
 
 const CheckboxStory = {
   title: "Checkbox",
@@ -66,7 +68,9 @@ export const Basic = () => (
     </FormGroup>
 
     <FormGroup>
-      <button type="submit">Отправить</button>
+      <Button size="sm" role="submit">
+        Отправить
+      </Button>
     </FormGroup>
   </Form>
 );
