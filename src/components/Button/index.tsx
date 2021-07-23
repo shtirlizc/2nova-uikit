@@ -7,6 +7,7 @@ import s from "./Button.module.css";
 export type ButtonProps = {
   type?: "primary" | "secondary" | "outlined" | "outlined-light";
   size?: "sm" | "md" | "lg" | "xl";
+  role?: "button" | "submit" | "reset";
   fullWidth?: boolean;
   isLoading?: boolean;
   disabled?: boolean;
@@ -16,6 +17,7 @@ export type ButtonProps = {
 export const Button: React.FC<ButtonProps> = ({
   type = "primary",
   size = "md",
+  role = "button",
   fullWidth = false,
   isLoading = false,
   disabled = false,
@@ -24,6 +26,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      type={role}
       className={classNames(
         s.root,
         s[type],
