@@ -4,3 +4,7 @@ export * from "./Select";
 export * from "./Table";
 export * from "./BarChart";
 export * from "./Tabs";
+export * from "./Form";
+export * from "./Checkbox";
+export * from "./Radio";
+export * from "./Rating";

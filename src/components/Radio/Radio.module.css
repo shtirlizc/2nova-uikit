@@ -1,0 +1,27 @@
+.root {
+}
+
+.formGroup {
+}
+
+.radio {
+}
+
+.radio input {
+}
+
+.radio input + label {
+}
+
+.radio input + label::before,
+.radio input + label::after {
+}
+
+.radio input + label::before {
+}
+
+.radio input + label::after {
+}
+
+.radio input:checked + label::after {
+}
