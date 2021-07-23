@@ -6,6 +6,13 @@ const RatingStory = {
   component: Rating,
 };
 
-export const Basic = () => <Rating>Checkbox</Rating>;
+export const Basic = () => (
+  <Rating
+    name="rating"
+    onChange={(evt) => {
+      console.log(evt);
+    }}
+  />
+);
 
 export default RatingStory;

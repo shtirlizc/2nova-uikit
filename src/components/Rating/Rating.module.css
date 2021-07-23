@@ -1,0 +1,41 @@
+.root {
+  display: flex;
+}
+
+.star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.star input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.star label {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.star label svg path {
+  transition: fill 0.2s ease-in-out;
+}
+
+.star label:hover {
+  transform: scale(1.1);
+}
+
+.star label:active {
+  transition: transform 0s;
+  transform: scale(1.2);
+}
+
+.star.active label svg path {
+  fill: #ffdd00;
+}
