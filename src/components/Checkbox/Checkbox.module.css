@@ -1,10 +1,11 @@
 .root {
   --side: 16px;
-  --icon-top: -2px;
+  --icon-top: 0;
   --icon-left: 0;
   --border: 1px solid #6b7f91;
 
   position: relative;
+  line-height: 16px;
 }
 
 .root input {
@@ -19,6 +20,7 @@
 }
 
 .root input + label {
+  margin: 0;
   display: inline-block;
   min-height: var(--side);
   font-weight: 400;
@@ -57,7 +59,7 @@
   border-right-style: none;
   transform: rotate(-45deg) scale(0);
   left: 3px;
-  top: 2px;
+  top: 4px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -79,7 +81,6 @@
   top: var(--icon-top);
   left: var(--icon-left);
   border: var(--border);
-  z-index: -1;
   pointer-events: none;
 }
 
