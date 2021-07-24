@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --font: Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, sans-serif;
@@ -156,16 +162,17 @@ code {
 }
 
 .Form_formGroup__1iZnP:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .Checkbox_root__30wAA {
   --side: 16px;
-  --icon-top: -2px;
+  --icon-top: 0;
   --icon-left: 0;
   --border: 1px solid #6b7f91;
 
   position: relative;
+  line-height: 16px;
 }
 
 .Checkbox_root__30wAA input {
@@ -180,6 +187,7 @@ code {
 }
 
 .Checkbox_root__30wAA input + label {
+  margin: 0;
   display: inline-block;
   min-height: var(--side);
   font-weight: 400;
@@ -218,7 +226,7 @@ code {
   border-right-style: none;
   transform: rotate(-45deg) scale(0);
   left: 3px;
-  top: 2px;
+  top: 4px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -240,7 +248,6 @@ code {
   top: var(--icon-top);
   left: var(--icon-left);
   border: var(--border);
-  z-index: -1;
   pointer-events: none;
 }
 
@@ -309,11 +316,12 @@ code {
 
 .Radio_root__1xtRE {
   --side: 16px;
-  --icon-top: -2px;
+  --icon-top: 0;
   --icon-left: 0;
   --border: 1px solid #6b7f91;
 
   position: relative;
+  line-height: 16px;
 }
 
 .Radio_root__1xtRE input {
@@ -328,6 +336,7 @@ code {
 }
 
 .Radio_root__1xtRE input + label {
+  margin: 0;
   display: inline-block;
   min-height: var(--side);
   font-weight: 400;
@@ -364,8 +373,8 @@ code {
   /* Grey/90 */
   background-color: #2c343c;
   transform: scale(0);
-  left: 4px;
-  top: 2px;
+  left: 3px;
+  top: 3px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -386,7 +395,6 @@ code {
   top: var(--icon-top);
   left: var(--icon-left);
   border: var(--border);
-  z-index: -1;
   pointer-events: none;
 }
 
@@ -586,4 +594,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.b87db7b8.chunk.css.map*/
+/*# sourceMappingURL=main.349a6ec7.chunk.css.map*/
