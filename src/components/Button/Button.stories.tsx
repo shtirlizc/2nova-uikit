@@ -15,7 +15,9 @@ export const Large = () => <Button size="lg">Button</Button>;
 export const Outlined = () => <Button type="outlined">Button</Button>;
 
 export const OutlinedLight = () => (
-  <Button type="outlined-light">Button</Button>
+  <div style={{ backgroundColor: "#333333", padding: 20 }}>
+    <Button type="outlined-light">Button</Button>
+  </div>
 );
 
 export const FullWidth = () => (
