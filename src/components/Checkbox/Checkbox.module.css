@@ -1,6 +1,6 @@
 .root {
   --side: 16px;
-  --icon-top: 0;
+  --icon-top: -1px;
   --icon-left: 0;
   --border: 1px solid #6b7f91;
 
@@ -59,7 +59,7 @@
   border-right-style: none;
   transform: rotate(-45deg) scale(0);
   left: 3px;
-  top: 4px;
+  top: 3px;
   transition: transform 0.2s ease-in-out;
 }
 

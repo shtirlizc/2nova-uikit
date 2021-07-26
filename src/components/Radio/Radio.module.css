@@ -1,6 +1,6 @@
 .root {
   --side: 16px;
-  --icon-top: 0;
+  --icon-top: -1px;
   --icon-left: 0;
   --border: 1px solid #6b7f91;
 
@@ -58,7 +58,7 @@
   background-color: #2c343c;
   transform: scale(0);
   left: 3px;
-  top: 3px;
+  top: 2px;
   transition: transform 0.2s ease-in-out;
 }
 
