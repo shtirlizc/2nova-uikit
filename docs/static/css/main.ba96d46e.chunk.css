@@ -603,6 +603,8 @@ code {
 
   --width: 100%;
   --minHeight: 80px;
+
+  overflow: hidden;
 }
 
 .Textarea_field__Ftq5y {
@@ -622,8 +624,8 @@ code {
 
 .Textarea_field__Ftq5y textarea {
   position: absolute;
-  top: -1px;
-  left: -1px;
+  top: 0;
+  left: 0;
   /* BG/White */
   background: #ffffff;
   /* Grey/30 */
@@ -689,4 +691,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.2feb2ef0.chunk.css.map*/
+/*# sourceMappingURL=main.ba96d46e.chunk.css.map*/
