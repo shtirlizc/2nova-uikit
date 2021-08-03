@@ -47,12 +47,12 @@ code {
   font: 500 1.2em var(--font);
   border-radius: 2px;
   cursor: pointer;
-  padding: 0 30px;
-  padding-top: var(--font-hack);
+  padding: var(--font-hack) 30px 0;
   border: 1px solid transparent;
   white-space: nowrap;
   transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out,
-    background 0.2s ease-in-out, border 0.2s ease-in-out;
+    background-color 0.2s ease-in-out, border 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
 }
 
 .Button_root__2bb-J:focus {
@@ -689,4 +689,4 @@ code {
 }
 
 
-/*# sourceMappingURL=main.c2732fa2.chunk.css.map*/
+/*# sourceMappingURL=main.2feb2ef0.chunk.css.map*/
