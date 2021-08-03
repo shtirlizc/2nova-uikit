@@ -6,6 +6,8 @@
 
   --width: 100%;
   --minHeight: 80px;
+
+  overflow: hidden;
 }
 
 .field {
@@ -25,8 +27,8 @@
 
 .field textarea {
   position: absolute;
-  top: -1px;
-  left: -1px;
+  top: 0;
+  left: 0;
   /* BG/White */
   background: #ffffff;
   /* Grey/30 */
