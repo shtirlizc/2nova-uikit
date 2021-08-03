@@ -1,18 +1,18 @@
-import React from "react";
-import { Rating } from "./index";
+import React, { useState } from "react";
+import { Rating, RatingValueType } from "./index";
 
 const RatingStory = {
   title: "Rating",
   component: Rating,
 };
 
-export const Basic = () => (
-  <Rating
-    name="rating"
-    onChange={(evt) => {
-      console.log(evt);
-    }}
-  />
-);
+export const Basic = () => {
+  const [value, setValue] = useState<RatingValueType | string>("1");
+  const handleValue = (evt: string | RatingValueType) => {
+    setValue(evt);
+  };
+
+  return <Rating name="rating" value={value} onChange={handleValue} />;
+};
 
 export default RatingStory;
