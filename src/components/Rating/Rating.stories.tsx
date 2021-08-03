@@ -7,7 +7,7 @@ const RatingStory = {
 };
 
 export const Basic = () => {
-  const [value, setValue] = useState<RatingValueType | string>("1");
+  const [value, setValue] = useState<RatingValueType | string>("");
   const handleValue = (evt: string | RatingValueType) => {
     setValue(evt);
   };

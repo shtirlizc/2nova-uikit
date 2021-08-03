@@ -4,8 +4,6 @@ import classNames from "classnames";
 import { ReactComponent as StarIcon } from "./assets/star.svg";
 import s from "./Rating.module.css";
 
-const stars = ["1", "2", "3", "4", "5"];
-
 export enum RatingValueType {
   One = "1",
   Two = "2",
@@ -14,13 +12,25 @@ export enum RatingValueType {
   Five = "5",
 }
 
+const stars: RatingValueType[] = [
+  RatingValueType.One,
+  RatingValueType.Two,
+  RatingValueType.Three,
+  RatingValueType.Four,
+  RatingValueType.Five,
+];
+
 export type RatingProps = {
   name: string;
   value: RatingValueType | string;
   onChange: (event: RatingValueType | string) => void;
 };
 
-export const Rating: React.FC<RatingProps> = ({ name, value, onChange }) => {
+export const Rating: React.FC<RatingProps> = ({
+  name,
+  value = "",
+  onChange,
+}) => {
   const handleChangeRating = (evt: React.FormEvent<HTMLInputElement>) => {
     onChange(evt.currentTarget.value);
   };
