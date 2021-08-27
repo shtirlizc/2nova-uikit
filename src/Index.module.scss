@@ -4,15 +4,13 @@
   box-sizing: border-box;
 }
 
-:root {
-  --font: Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, sans-serif;
-}
+$font: 'Helvetica Neue', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+Cantarell, Fira Sans, Droid Sans, sans-serif;
 
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font);
+  font-family: $font;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { ReactComponent as Preloader } from "./assets/loading.svg";
 
-import s from "./Button.module.css";
+import s from "./Button.module.scss";
 
 export type ButtonProps = {
   type?: "primary" | "secondary" | "outlined" | "outlined-light";
