@@ -7,7 +7,6 @@
     "@babel/polyfill": "^7.12.1",
     "@types/react-select": "^4.0.13",
     "classnames": "^2.2.6",
-    "css-vars-ponyfill": "^2.4.6",
     "prop-types": "^15.7.2",
     "react-select": "^4.1.0"
   },
