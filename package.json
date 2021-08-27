@@ -7,10 +7,10 @@
     "@babel/polyfill": "^7.12.1",
     "@types/react-select": "^4.0.13",
     "classnames": "^2.2.6",
-    "node-sass": "^5.0.0",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react-select": "^4.1.0",
-    "sass-loader": "^12.1.0"
+    "sass-loader": "^10.1.1"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
