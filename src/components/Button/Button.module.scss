@@ -11,7 +11,7 @@
   $sm: 32px;
 
   $font-hack: 4px;
-  $font-hack-with-border: calc(#{$font-hack} + 2px);
+  $font-hack-with-border: $font-hack + 2px;
 
   background: none;
   box-shadow: none;
