@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-import s from "./PieChart.module.css";
+import s from "./PieChart.module.scss";
 
 type PieChartProps = {
   progress: number;

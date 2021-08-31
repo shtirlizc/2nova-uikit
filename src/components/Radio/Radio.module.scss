@@ -1,0 +1,95 @@
+.root {
+  $side: 16px;
+  $icon-top: -1px;
+  $icon-left: 0;
+  $border: 1px solid #6b7f91;
+
+  position: relative;
+  line-height: 16px;
+
+  input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    + label {
+      margin: 0;
+      display: inline-block;
+      min-height: $side;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      /* Grey/90 */
+      color: #2c343c;
+      padding-left: calc(#{$side} + 8px);
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+      }
+
+      &::before {
+        width: $side;
+        height: $side;
+        border-radius: 50%;
+        /* Grey/50 */
+        border: $border;
+        background-color: #ffffff;
+        top: $icon-top;
+        left: $icon-left;
+        transition: border 0.2s ease-in-out;
+      }
+
+      &::after {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        /* Grey/90 */
+        background-color: #2c343c;
+        transform: scale(0);
+        left: 3px;
+        top: 2px;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+
+    &:checked {
+      + label {
+        &::before {
+          /* Primary/90 * */
+          border-color: #2c343c;
+        }
+
+        &::after {
+          transform: scale(1);
+        }
+      }
+
+      ~ .radioWave {
+        transform: scale(1.8);
+        filter: blur(1px);
+        opacity: 0;
+        transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out,
+          opacity 0.4s ease-in-out;
+      }
+    }
+  }
+
+  .radioWave {
+    position: absolute;
+    width: $side;
+    height: $side;
+    border-radius: 50%;
+    top: $icon-top;
+    left: $icon-left;
+    border: $border;
+    pointer-events: none;
+  }
+}

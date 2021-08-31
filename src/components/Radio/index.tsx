@@ -1,6 +1,6 @@
 import React from "react";
 
-import s from "./Radio.module.css";
+import s from "./Radio.module.scss";
 
 export type RadioProps = {
   id: string;

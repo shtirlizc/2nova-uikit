@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import s from "./Textarea.module.css";
+import s from "./Textarea.module.scss";
 
 export type TextareaProps = {
   id: string;

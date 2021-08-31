@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import s from "./Table.module.css";
+import s from "./Table.module.scss";
 
 type HeadCellType = {
   id: number;

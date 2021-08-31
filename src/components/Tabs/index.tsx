@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import s from "./Tabs.module.css";
+import s from "./Tabs.module.scss";
 
 const ThemeContext = React.createContext({
   activeTab: 0,

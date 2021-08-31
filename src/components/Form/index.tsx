@@ -1,6 +1,6 @@
 import React from "react";
 
-import s from "./Form.module.css";
+import s from "./Form.module.scss";
 
 export type FormProps = {
   onSubmit?: (event: React.FormEvent<HTMLFormElement>) => void;

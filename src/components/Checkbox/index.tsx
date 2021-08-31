@@ -1,6 +1,6 @@
 import React from "react";
 
-import s from "./Checkbox.module.css";
+import s from "./Checkbox.module.scss";
 
 export type CheckboxProps = {
   id: string;

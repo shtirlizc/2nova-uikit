@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 import { ReactComponent as StarIcon } from "./assets/star.svg";
-import s from "./Rating.module.css";
+import s from "./Rating.module.scss";
 
 export enum RatingValueType {
   One = "1",

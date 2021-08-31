@@ -1,8 +1,6 @@
 import React from "react";
 import Select from "react-select";
 
-import s from "./Select.module.css";
-
 interface IStyles {
   isFocused?: boolean;
   isSelected?: boolean;
@@ -64,14 +62,12 @@ export const SelectCommon: React.FC<SelectCommonProps> = ({
   onChange,
 }) => {
   return (
-    <div className={s.root}>
-      <Select
-        styles={styles}
-        options={options}
-        defaultValue={defaultValue}
-        placeholder={placeholder}
-        onChange={onChange}
-      />
-    </div>
+    <Select
+      styles={styles}
+      options={options}
+      defaultValue={defaultValue}
+      placeholder={placeholder}
+      onChange={onChange}
+    />
   );
 };
